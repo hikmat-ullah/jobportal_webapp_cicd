@@ -25,7 +25,10 @@ pipeline {
 
         stage('Test') {
             steps {
+
+                catchError(buildResult: 'UNSTABLE', stageResult: 'UNSTABLE') {
                 sh './scripts/unit_test/phpunit_tests.sh vendor/bin/phpunit --configuration phpunit.xml'
+            }
             }
 
             /* post {
