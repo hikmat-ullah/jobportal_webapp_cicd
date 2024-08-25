@@ -13,7 +13,7 @@ echo $PASS >> /tmp/.creds
 
 echo "Copying necessary files to remote server"
 scp -i /opt/prod /tmp/.creds admin@192.168.232.133:/tmp/.creds
-scp -i /home/admin/jenkins-data/prod -r db_data .env docker-compose.yaml admin@192.168.232.133:/home/admin/maven
+scp -i /opt/prod -r db_data .env docker-compose.yaml admin@192.168.232.133:/home/admin/maven
 
 scp -i /opt/prod launch_app admin@192.168.232.133:/tmp/launch_app
 ssh -i /opt/prod admin@192.168.232.133 "/tmp/launch_app"
