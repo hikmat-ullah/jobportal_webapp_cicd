@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './scripts/unit_test/phpunit_tests.sh'
+                sh './scripts/unit_test/phpunit_tests.sh vendor/bin/phpunit --configuration phpunit.xml'
             }
 
             /* post {

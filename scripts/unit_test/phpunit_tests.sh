@@ -3,11 +3,7 @@
 echo "**********************"
 echo "Testing Laravel Image "
 echo "**********************"
-#unit_testing=vendor/bin/phpunit --configuration phpunit.xml
-export BUILD_TAG=$(sed -n '2p' /tmp/.creds)
 
-docker run --rm -ti -v jobportal:/app hikmatmarwat/job_portal:$BUILD_TAG vendor/bin/phpunit --configuration phpunit.xml
+docker run --rm -ti -v jobportal:/app hikmatmarwat/job_portal:1.6 "$@"
 
-#docker run --rm -ti -v jobportal-web-app-master:/app hikmatmarwat/job_portal:$BUILD_TAG vendor/bin/phpunit --configuration phpunit.xml
 
-#docker run --rm -ti -v jobportal-web-app-master:/app hikmatmarwat/job_portal:1.5 "$unit_testing"
