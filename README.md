@@ -1,6 +1,6 @@
 # jobportal_webapp_cicd
 ## Job Portal Web Application 
-### This is the job portal web application written in PHP Laravel and dockerized using docker containers. This repo contains a jenkins CICD pipeline that contains the following stages:
+#### This is the job portal web application written in PHP Laravel and dockerized using docker containers. This repo contains a jenkins CICD pipeline that contains the following stages:
 #### Build, Test, Push and Deploy
 ##### Build: This stage builds the docker image
 ##### Test: This stage tests the docker image
